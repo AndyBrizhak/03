@@ -18,7 +18,7 @@
         </Menu>
         <TabControl Grid.Row="1">
             <TabItem Header="Edit">
-                <StackPanel>
+                <StackPanel Margin="0,0,0,-8">
                     <Label Content="Name Letter"/>
                     <TextBlock Margin="0,0,509,0"/>
                     <Label Content="Content letter"/>
@@ -29,11 +29,11 @@
                         <ComboBoxItem> other@gmail.com</ComboBoxItem>
                     </ComboBox>
                     <Label Content="To"/>
-                    <ComboBox x:Name="cbTo" Text="myemail@gmail.com">
-                        
+                    <ComboBox x:Name="cbTo" Text="myemail@gmail.com" HorizontalAlignment="Left" Width="786">
+                        <ComboBoxItem>pupkin@gmail.com</ComboBoxItem>
+                        <ComboBoxItem>logkin@gmail.com</ComboBoxItem>
                     </ComboBox>
-
-
+                    <Button x:Name="btnSend" Width="auto" Content="Send immediately" Click="btnSend_Click"/>
                 </StackPanel>
 
             </TabItem>
