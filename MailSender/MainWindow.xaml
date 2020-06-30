@@ -7,6 +7,41 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="17"/>
+            <RowDefinition Height="281"/>
+            <RowDefinition Height="39"/>
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0">
+            <MenuItem Header="File"/>
+            <MenuItem Header="Help"/>
+        </Menu>
+        <TabControl Grid.Row="1">
+            <TabItem Header="Edit">
+                <StackPanel>
+                    <Label Content="Name Letter"/>
+                    <TextBlock Margin="0,0,509,0"/>
+                    <Label Content="Content letter"/>
+                    <TextBlock Margin="0,0,10,0" Height="92"/>
+                    <Label Content="From"/>
+                    <ComboBox x:Name="cbFrom" Text="myemail@gmail.com">
+                        <ComboBoxItem>myemail@gmail.com</ComboBoxItem>
+                        <ComboBoxItem> other@gmail.com</ComboBoxItem>
+                    </ComboBox>
+                    <Label Content="To"/>
+                    <ComboBox x:Name="cbTo" Text="myemail@gmail.com">
+                        
+                    </ComboBox>
+
+
+                </StackPanel>
+
+            </TabItem>
+            <TabItem Header="Prefer"/>
+            <TabItem Header="Log"/>
+        </TabControl>
+            
     </Grid>
 </Window>
+
+
