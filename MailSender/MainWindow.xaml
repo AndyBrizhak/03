@@ -31,14 +31,22 @@
                     <Label Content="To"/>
                     <ComboBox x:Name="cbTo" Text="myemail@gmail.com" HorizontalAlignment="Left" Width="786">
                         <ComboBoxItem>pupkin@gmail.com</ComboBoxItem>
-                        <ComboBoxItem>logkin@gmail.com</ComboBoxItem>
+                        <ComboBoxItem>lojkin@gmail.com</ComboBoxItem>
                     </ComboBox>
                     <Button x:Name="btnSend" Width="auto" Content="Send immediately" Click="btnSend_Click"/>
                 </StackPanel>
 
             </TabItem>
-            <TabItem Header="Prefer"/>
-            <TabItem Header="Log"/>
+            <TabItem Header="Prefer">
+                <StackPanel>
+                    <Label Content="Server" Width="auto"/>
+                    <TextBox x:Name="tbServer" Width="155" HorizontalAlignment="Left" Text="smtp.google.com"> </TextBox>
+                    <Label Content="Port" Width="auto"/>
+                    <TextBox Grid.Row="1" x:Name="tbPort" Width="30" HorizontalAlignment="Left" Text="58" />      
+
+                </StackPanel>
+            </TabItem>
+                <TabItem Header="Log"/>
         </TabControl>
             
     </Grid>
