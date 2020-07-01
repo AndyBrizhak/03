@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace MailSender
 {
     /// <summary>
@@ -23,6 +24,26 @@ namespace MailSender
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void btnSend_Click(object sender, RoutedEventArgs e)
+        {
+            EMailInfo info = new EMailInfo();
+            info.Sender = cbFrom.Text;
+            info.Body = tbBody.Text;
+            info.Password = pbPassword.Password;
+            info.Port = int.Parse(tbPort.Text);
+            info.SMTPClient = tbServer.Text;
+            info.Subject = tbSubject.Text;
+            info.From = cbFrom.Text;
+            info.To = cbTo.Text;
+            EmailSendServiceClass emailSendServiceClass = new EmailSendServiceClass();
+            emailSendServiceClass.Send(info);
+            tbLog.Text += DateTime.Now + "r\n";
+            tbLog.Text += emailSendServiceClass.Status + Environment.NewLine;
+            tbLog.Text += emailSendServiceClass.ErrorInfo + Environment.NewLine;
+
+
         }
     }
 }

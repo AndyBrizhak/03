@@ -20,9 +20,9 @@
             <TabItem Header="Edit">
                 <StackPanel Margin="0,0,0,-8">
                     <Label Content="Name Letter"/>
-                    <TextBlock Margin="0,0,509,0"/>
+                    <TextBlock x:Name="tbSubject" Margin="0,0,509,0"/>
                     <Label Content="Content letter"/>
-                    <TextBlock Margin="0,0,10,0" Height="60"/>
+                    <TextBlock x:Name="tbBody"  Margin="0,0,10,0" Height="60"/>
                     <Label Content="From"/> 
                     <ComboBox x:Name="cbFrom" Text="myemail@gmail.com">
                         <ComboBoxItem>myemail@gmail.com</ComboBoxItem>
