@@ -13,15 +13,19 @@ namespace MailSender
     {
         public string Status { get; private set; } = "Ok";
         public string ErrorInfo { get; private set; } = "";
-
-        public  bool    Send(EMailInfo eMailInfo)
+        /// <summary>
+        /// Method 
+        /// </summary>
+        /// <param name="eMailInfo"></param>
+        /// <returns></returns>
+        public bool    Send(EMailInfo eMailInfo)
         {
             MailMessage mm = new MailMessage(eMailInfo.From, eMailInfo.To);
             mm.Subject = eMailInfo.Subject;
             mm.Body = eMailInfo.Body;
             mm.IsBodyHtml = false;
 
-            //Login and Sending
+            
             SmtpClient sc = new SmtpClient(eMailInfo.SMTPClient, eMailInfo.Port);
             sc.EnableSsl = true;
             sc.DeliveryMethod = SmtpDeliveryMethod.Network;
