@@ -22,8 +22,8 @@
                     <Label Content="Name Letter"/>
                     <TextBlock Margin="0,0,509,0"/>
                     <Label Content="Content letter"/>
-                    <TextBlock Margin="0,0,10,0" Height="92"/>
-                    <Label Content="From"/>
+                    <TextBlock Margin="0,0,10,0" Height="60"/>
+                    <Label Content="From"/> 
                     <ComboBox x:Name="cbFrom" Text="myemail@gmail.com">
                         <ComboBoxItem>myemail@gmail.com</ComboBoxItem>
                         <ComboBoxItem> other@gmail.com</ComboBoxItem>
@@ -42,12 +42,25 @@
                     <Label Content="Server" Width="auto"/>
                     <TextBox x:Name="tbServer" Width="155" HorizontalAlignment="Left" Text="smtp.google.com"> </TextBox>
                     <Label Content="Port" Width="auto"/>
-                    <TextBox Grid.Row="1" x:Name="tbPort" Width="30" HorizontalAlignment="Left" Text="58" />      
-
+                    <TextBox Grid.Row="1" x:Name="tbPort" Width="30" HorizontalAlignment="Left" Text="58" />
+                    <Line/>
+                    <Label Content="User Name" Width="auto"/>
+                     <TextBox  x:Name="tbUserName" Width="350" HorizontalAlignment="Left" Text="andy@google.com"/>
+                    <Line></Line>
+                    <Label Content="Password" Width="auto"/>
+                    <PasswordBox x:Name="pbPassword" Width="350" HorizontalAlignment="Left" PasswordChar="*" Password="1234"/>
                 </StackPanel>
             </TabItem>
-                <TabItem Header="Log"/>
+            <TabItem Header="Log">
+                <TextBox x:Name="tbLog" HorizontalAlignment="Stretch"
+                         VerticalAlignment="Stretch" AcceptsReturn="True"
+                         ScrollViewer.CanContentScroll="True"
+                         ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+            </TabItem>
         </TabControl>
+        <StatusBar x:Name="sbStatus" Grid.Row="2" Margin="0,101,0,-79">
+            <Label x:Name="lbStatus"/>
+        </StatusBar>
             
     </Grid>
 </Window>
