@@ -9,8 +9,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson 01", "Lesson 01", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson 02", "Lesson 02", "{B05CD921-90D9-4FB2-9A6A-15DD3856A197}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TabSwitcher", "TabSwitcher\TabSwitcher.csproj", "{AABA80BF-4847-4D7C-AF53-79CB14536618}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,16 +19,9 @@ Global
 		{DE2F7D05-5FDC-416D-B27D-3AA336BB325C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE2F7D05-5FDC-416D-B27D-3AA336BB325C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE2F7D05-5FDC-416D-B27D-3AA336BB325C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AABA80BF-4847-4D7C-AF53-79CB14536618}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AABA80BF-4847-4D7C-AF53-79CB14536618}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AABA80BF-4847-4D7C-AF53-79CB14536618}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AABA80BF-4847-4D7C-AF53-79CB14536618}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{AABA80BF-4847-4D7C-AF53-79CB14536618} = {B05CD921-90D9-4FB2-9A6A-15DD3856A197}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {15A63000-88B7-4011-8D98-08DD58B6BD2B}
