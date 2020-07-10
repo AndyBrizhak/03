@@ -23,7 +23,15 @@ namespace MyTabSwitcher
         public UserControl1()
         {
             InitializeComponent();
+
+
+            //btnPrevious.Click += BtnPrevious_Click;
         }
+
+
+        public event RoutedEventHandler btnNextClick;
+
+        public event RoutedEventHandler btnPreviousClick;
 
         //properties
 
@@ -119,6 +127,15 @@ namespace MyTabSwitcher
             else if (!bHideBtnNext && !bHidebtnPrevious) btnPreviousFalseBtnNextFalse();
             else if (bHideBtnNext && !bHidebtnPrevious) BtnNextTruebtnPreviousFalse();
             else if (!bHideBtnNext && bHidebtnPrevious) btnPreviousTrueBtnNextFalse();
+        }
+
+        private void btnNext_Click(object sender, RoutedEventArgs e)
+        {
+            btnNextClick?.Invoke(sender, e);
+        }
+        private void btnPrevious_Click(object sender, RoutedEventArgs e)
+        {
+            btnPreviousClick?.Invoke(sender, e);
         }
     }
 }
