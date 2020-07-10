@@ -9,8 +9,8 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="17"/>
-            <RowDefinition Height="281"/>
-            <RowDefinition Height="39"/>
+            <RowDefinition Height="295"/>
+            <RowDefinition Height="35"/>
         </Grid.RowDefinitions>
         <Menu Grid.Row="0">
             <MenuItem Header="File"/>
@@ -23,10 +23,10 @@
                     <TextBlock x:Name="tbSubject" Margin="0,0,509,0"/>
                     <Label Content="Content letter"/>
                     <TextBlock x:Name="tbBody"  Margin="0,0,10,0" Height="60"/>
-                    <Label Content="From"/> 
+                    <Label Content="From"/>
                     <ComboBox x:Name="cbFrom" Text="myemail@gmail.com">
                         <ComboBoxItem>myemail@gmail.com</ComboBoxItem>
-                        <ComboBoxItem> other@gmail.com</ComboBoxItem>
+                        <ComboBoxItem>other@gmail.com</ComboBoxItem>
                     </ComboBox>
                     <Label Content="To"/>
                     <ComboBox x:Name="cbTo" Text="myemail@gmail.com" HorizontalAlignment="Left" Width="786">
@@ -34,18 +34,26 @@
                         <ComboBoxItem>lojkin@gmail.com</ComboBoxItem>
                     </ComboBox>
                     <Button x:Name="btnSend" Width="auto" Content="Send immediately" Click="btnSend_Click"/>
+                    <TabControl Height="100">
+                        <TabItem Header="TabItem">
+                            <Grid Background="#FFE5E5E5"/>
+                        </TabItem>
+                        <TabItem Header="TabItem">
+                            <Grid Background="#FFE5E5E5"/>
+                        </TabItem>
+                    </TabControl>
                 </StackPanel>
 
             </TabItem>
             <TabItem Header="Prefer">
                 <StackPanel>
                     <Label Content="Server" Width="auto"/>
-                    <TextBox x:Name="tbServer" Width="155" HorizontalAlignment="Left" Text="smtp.google.com"> </TextBox>
+                    <TextBox x:Name="tbServer" Width="155" HorizontalAlignment="Left" Text="smtp.google.com"></TextBox>
                     <Label Content="Port" Width="auto"/>
                     <TextBox Grid.Row="1" x:Name="tbPort" Width="30" HorizontalAlignment="Left" Text="58" />
                     <Line/>
                     <Label Content="User Name" Width="auto"/>
-                     <TextBox  x:Name="tbUserName" Width="350" HorizontalAlignment="Left" Text="andy@google.com"/>
+                    <TextBox  x:Name="tbUserName" Width="350" HorizontalAlignment="Left" Text="andy@google.com"/>
                     <Line></Line>
                     <Label Content="Password" Width="auto"/>
                     <PasswordBox x:Name="pbPassword" Width="350" HorizontalAlignment="Left" PasswordChar="*" Password="1234"/>
@@ -61,7 +69,7 @@
         <StatusBar x:Name="sbStatus" Grid.Row="2" Margin="0,101,0,-79">
             <Label x:Name="lbStatus"/>
         </StatusBar>
-            
+
     </Grid>
 </Window>
 
