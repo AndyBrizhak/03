@@ -9,8 +9,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson 01", "Lesson 01", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson 02", "Lesson 02", "{B05CD921-90D9-4FB2-9A6A-15DD3856A197}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TabSwitcher", "D:\source\repos\TabSwitcher\TabSwitcher.csproj", "{0DAC5A7B-B1B3-4E21-B38D-6614B0D318DE}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyTabSwitcher", "MyTabSwitcher\MyTabSwitcher.csproj", "{EE6E2B9A-92E6-4E8B-881E-D2BA2C34C6F7}"
 EndProject
 Global
@@ -23,10 +21,6 @@ Global
 		{DE2F7D05-5FDC-416D-B27D-3AA336BB325C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE2F7D05-5FDC-416D-B27D-3AA336BB325C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE2F7D05-5FDC-416D-B27D-3AA336BB325C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0DAC5A7B-B1B3-4E21-B38D-6614B0D318DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0DAC5A7B-B1B3-4E21-B38D-6614B0D318DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0DAC5A7B-B1B3-4E21-B38D-6614B0D318DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0DAC5A7B-B1B3-4E21-B38D-6614B0D318DE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EE6E2B9A-92E6-4E8B-881E-D2BA2C34C6F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EE6E2B9A-92E6-4E8B-881E-D2BA2C34C6F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE6E2B9A-92E6-4E8B-881E-D2BA2C34C6F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
