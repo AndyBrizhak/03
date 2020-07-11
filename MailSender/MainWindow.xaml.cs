@@ -42,8 +42,36 @@ namespace MailSender
             tbLog.Text += DateTime.Now + "r\n";
             tbLog.Text += emailSendServiceClass.Status + Environment.NewLine;
             tbLog.Text += emailSendServiceClass.ErrorInfo + Environment.NewLine;
+        }
 
+        private void tscTabSwitcherControl_btnNextClick(object sender, RoutedEventArgs e)
+        {
+            tabControl.SelectedIndex = (tabControl.SelectedIndex + 1) % tabControl.Items.Count;
+        }
+
+        private void tscTabSwitcherControl_btnPreviousClick(object sender, RoutedEventArgs e)
+        {
+            if (tabControl.SelectedIndex==0)
+            {
+              tabControl.SelectedIndex =  tabControl.Items.Count - 1;
+            }
+            else
+            {
+                tabControl.SelectedIndex--;
+            }
 
         }
+
+
+
+        //private void TscTabSwitcher_btnNextClick(object sender, RoutedEventArgs e)
+        //{
+        //    tabControl.SelectedIndex = 1;
+        //}
+
+        //private void btnPrevios_Click(object sender, RoutedEventArgs e)
+        //{
+
+        //}
     }
 }

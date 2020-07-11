@@ -139,5 +139,11 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyTabSwitcher\MyTabSwitcher.csproj">
+      <Project>{EE6E2B9A-92E6-4E8B-881E-D2BA2C34C6F7}</Project>
+      <Name>MyTabSwitcher</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

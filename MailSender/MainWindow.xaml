@@ -1,9 +1,10 @@
-﻿<Window x:Class="MailSender.MainWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MailSender"
+        xmlns:MyTabSwitcher="clr-namespace:MyTabSwitcher;assembly=MyTabSwitcher" x:Class="MailSender.MainWindow"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
@@ -16,7 +17,7 @@
             <MenuItem Header="File"/>
             <MenuItem Header="Help"/>
         </Menu>
-        <TabControl Grid.Row="1">
+        <TabControl x:Name="tabControl" Grid.Row="1">
             <TabItem Header="Edit">
                 <StackPanel Margin="0,0,0,-8">
                     <Label Content="Name Letter"/>
@@ -25,13 +26,13 @@
                     <TextBlock x:Name="tbBody"  Margin="0,0,10,0" Height="60"/>
                     <Label Content="From"/>
                     <ComboBox x:Name="cbFrom" Text="myemail@gmail.com">
-                        <ComboBoxItem>myemail@gmail.com</ComboBoxItem>
-                        <ComboBoxItem>other@gmail.com</ComboBoxItem>
+                        <ComboBoxItem Content="myemail@gmail.com"/>
+                        <ComboBoxItem Content="other@gmail.com"/>
                     </ComboBox>
                     <Label Content="To"/>
                     <ComboBox x:Name="cbTo" Text="myemail@gmail.com" HorizontalAlignment="Left" Width="786">
-                        <ComboBoxItem>pupkin@gmail.com</ComboBoxItem>
-                        <ComboBoxItem>lojkin@gmail.com</ComboBoxItem>
+                        <ComboBoxItem Content="pupkin@gmail.com"/>
+                        <ComboBoxItem Content="lojkin@gmail.com"/>
                     </ComboBox>
                     <Button x:Name="btnSend" Width="auto" Content="Send immediately" Click="btnSend_Click"/>
                     <TabControl Height="100">
@@ -48,13 +49,13 @@
             <TabItem Header="Prefer">
                 <StackPanel>
                     <Label Content="Server" Width="auto"/>
-                    <TextBox x:Name="tbServer" Width="155" HorizontalAlignment="Left" Text="smtp.google.com"></TextBox>
+                    <TextBox x:Name="tbServer" Width="155" HorizontalAlignment="Left" Text="smtp.google.com"/>
                     <Label Content="Port" Width="auto"/>
                     <TextBox Grid.Row="1" x:Name="tbPort" Width="30" HorizontalAlignment="Left" Text="58" />
                     <Line/>
                     <Label Content="User Name" Width="auto"/>
                     <TextBox  x:Name="tbUserName" Width="350" HorizontalAlignment="Left" Text="andy@google.com"/>
-                    <Line></Line>
+                    <Line/>
                     <Label Content="Password" Width="auto"/>
                     <PasswordBox x:Name="pbPassword" Width="350" HorizontalAlignment="Left" PasswordChar="*" Password="1234"/>
                 </StackPanel>
@@ -66,8 +67,10 @@
                          ScrollViewer.VerticalScrollBarVisibility="Auto"/>
             </TabItem>
         </TabControl>
-        <StatusBar x:Name="sbStatus" Grid.Row="2" Margin="0,101,0,-79">
+        <StatusBar x:Name="sbStatus" Grid.Row="2" Margin="0,85,0,-79">
             <Label x:Name="lbStatus"/>
+            <MyTabSwitcher:UserControl1 x:Name="tscTabSwitcher" Height="20" Width="244" btnNextClick="tscTabSwitcherControl_btnNextClick" btnPreviousClick="tscTabSwitcherControl_btnPreviousClick"/>
+
         </StatusBar>
 
     </Grid>

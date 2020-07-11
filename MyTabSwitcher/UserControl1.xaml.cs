@@ -29,9 +29,7 @@ namespace MyTabSwitcher
         }
 
 
-        public event RoutedEventHandler btnNextClick;
-
-        public event RoutedEventHandler btnPreviousClick;
+        
 
         //properties
 
@@ -129,13 +127,25 @@ namespace MyTabSwitcher
             else if (!bHideBtnNext && bHidebtnPrevious) btnPreviousTrueBtnNextFalse();
         }
 
-        private void btnNext_Click(object sender, RoutedEventArgs e)
+        public event RoutedEventHandler btnNextClick;
+        public event RoutedEventHandler btnPreviousClick;
+
+        private void    btnNext_Click(object sender, RoutedEventArgs e)
         {
-            btnNextClick?.Invoke(sender, e);
+            btnPreviousClick?.Invoke(sender, e);
         }
+
         private void btnPrevious_Click(object sender, RoutedEventArgs e)
         {
             btnPreviousClick?.Invoke(sender, e);
         }
+
+        
+
+        
+
+
+
+        
     }
 }
